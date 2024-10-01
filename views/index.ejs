@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul>
+      <form action="/" method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="email" placeholder="email">
+        <input type="text" name="password" placeholder="password">
+        <input type="text" name="confrimPassword" placeholder="confrimPassword">
+        <button>register</button>
+      </form>
+      <% users.forEach(({id, email, name, password}) => {%>
+        <li>
+          <h2><%=name%></h2>
+          <h2><%=email%></h2>
+          <h2><%=password%></h2>
+          <h2><%=id%></h2>
+        </li>
+      <%})%>
+    </ul>
+  </body>
+</html>
